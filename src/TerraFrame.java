@@ -3289,7 +3289,7 @@ public class TerraFrame extends JPanel implements ChangeListener, KeyListener, M
                         ucx = ux - CHUNKBLOCKS * ((int)(ux/CHUNKBLOCKS));
                         ucy = uy - CHUNKBLOCKS * ((int)(uy/CHUNKBLOCKS));
                         if (Arrays.asList(toolList).contains(inventory.tool())) {
-                            if (blocks[layer][uy][ux] != 0 && Arrays.asList(BLOCKTOOLS.get(blocks[layer][uy][ux])).contains(inventory.tool())) {
+                            if (layer < blocks.length && uy < blocks[layer].length && ux < blocks[layer][uy].length && blocks[layer][uy][ux] != 0 && Arrays.asList(BLOCKTOOLS.get(blocks[layer][uy][ux])).contains(inventory.tool())) {
                                 blockdns[uy][ux] = (byte)random.nextInt(5);
                                 drawn[uy][ux] = false;
                                 if (ux == mx && uy == my && inventory.tool() == miningTool) {
