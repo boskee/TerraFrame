@@ -867,6 +867,7 @@ public class TerraFrame extends JPanel implements ChangeListener, KeyListener, M
             addMouseListener(this);
             addMouseMotionListener(this);
             addMouseWheelListener(this);
+            requestFocusInWindow();
 
             screen = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
 
