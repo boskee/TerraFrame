@@ -442,7 +442,7 @@ import javax.swing.event.*;
 
 */
 
-public class TerraFrame extends JApplet implements ChangeListener, KeyListener, MouseListener, MouseMotionListener, MouseWheelListener {
+public class TerraFrame extends JPanel implements ChangeListener, KeyListener, MouseListener, MouseMotionListener, MouseWheelListener {
 
     static GraphicsConfiguration config = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration();
     BufferedImage screen;
@@ -850,7 +850,7 @@ public class TerraFrame extends JApplet implements ChangeListener, KeyListener, 
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
 
-        JApplet ap = new TerraFrame();
+        TerraFrame ap = new TerraFrame();
         ap.setFocusable(true);
         f.add("Center", ap);
         f.pack();
